@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order Devon — online ordering for Devon Avenue restaurants, Chicago</title>
+<meta name="description" content="Order Devon is a commission-fair online ordering hub being built for the restaurants of Devon Avenue, Chicago. Founding restaurants wanted; diner ordering opens at launch.">
+<link rel="canonical" href="https://orderdevon.com/">
+<meta property="og:title" content="Order Devon — online ordering for Devon Avenue, Chicago">
+<meta property="og:description" content="A commission-fair ordering hub for Devon Avenue's restaurants. Founding restaurants wanted; diner ordering opens at launch.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://orderdevon.com/">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230F1B2D'/%3E%3Cpath d='M16 6l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L8.8 11.3l5-.7z' fill='%23CE2F3C'/%3E%3Cpath d='M7 25h18' stroke='%233C8DBC' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Order Devon","url":"https://orderdevon.com/","description":"An online ordering hub being built for the restaurants of Devon Avenue in Chicago.","inLanguage":"en-US"}
+</script>
+<style>
+:root{
+  --midnight:#0F1B2D; --navy:#182A42; --lake:#3C8DBC; --lakedeep:#23648C;
+  --star:#CE2F3C; --paper:#F6F9FB; --card:#FFFFFF; --line:#D9E2EA; --sub:#49596B;
+  --disp:"Big Shoulders Display",system-ui,sans-serif; --ui:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--midnight);font-family:var(--ui);font-size:16px;line-height:1.6}
+a{color:var(--lakedeep)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--star);outline-offset:2px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+/* Sticky app bar */
+.appbar{position:sticky;top:0;z-index:20;background:var(--midnight);color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.appbar .wrap{display:flex;align-items:center;gap:16px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;flex:none}
+.brand b{font-family:var(--disp);font-weight:800;font-size:1.45rem;letter-spacing:.02em;text-transform:uppercase}
+.brand b span{color:var(--lake)}
+.searchrow{display:flex;gap:10px;flex:1;min-width:260px}
+.searchrow .field{display:flex;align-items:center;gap:8px;background:var(--navy);border:1px solid #2B405C;border-radius:8px;padding:9px 12px;flex:1}
+.searchrow .field svg{flex:none}
+.searchrow input{background:transparent;border:0;color:#fff;font:inherit;font-size:.93rem;width:100%;padding:0}
+.searchrow input::placeholder{color:#8DA2B9}
+.searchrow .loc{flex:0 1 215px}
+.appbar .cta{flex:none;background:var(--star);color:#fff;text-decoration:none;font-weight:600;font-size:.9rem;padding:10px 16px;border-radius:8px}
+.appbar .cta:hover{background:#b22534}
+/* Hero */
+.hero{background:var(--midnight);color:#C9D7E4;background-image:
+  radial-gradient(circle at 85% 20%, rgba(60,141,188,.25), transparent 45%),
+  radial-gradient(circle at 10% 90%, rgba(206,47,60,.18), transparent 40%)}
+.hero .wrap{padding-top:54px;padding-bottom:54px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-family:var(--disp);font-weight:800;text-transform:uppercase;letter-spacing:.015em;color:#fff;font-size:clamp(2.4rem,6vw,4.2rem);line-height:.98;max-width:14ch}
+.hero p.lede{margin-top:16px;max-width:52ch;font-size:1.08rem}
+.hero .pills{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap;font-size:.88rem;font-weight:600}
+.hero .pills span{border:1px solid #3B5674;border-radius:999px;padding:7px 14px;color:#AFC4D8}
+.hero-art{justify-self:center}
+/* Chips */
+.chipbar{background:var(--card);border-bottom:1px solid var(--line);position:relative;z-index:5}
+.chipbar .wrap{display:flex;gap:10px;overflow-x:auto;padding-top:14px;padding-bottom:14px}
+.chip{flex:none;border:1.5px solid var(--midnight);border-radius:999px;padding:8px 16px;font-weight:600;font-size:.9rem;color:var(--midnight);background:var(--card);cursor:pointer;font-family:var(--ui)}
+.chip[aria-pressed="true"]{background:var(--midnight);color:#fff}
+.chip:hover{border-color:var(--lakedeep);color:var(--lakedeep)}
+.chip[aria-pressed="true"]:hover{color:#fff}
+section{padding:54px 0}
+.kicker{font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--star);font-size:1rem;margin-bottom:6px}
+h2{font-family:var(--disp);font-weight:800;text-transform:uppercase;letter-spacing:.015em;font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.05;margin-bottom:12px}
+/* Vendor grid */
+.vendors p.intro{max-width:66ch;color:var(--sub);margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.vcard{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.vcard .vart{height:130px;display:flex;align-items:center;justify-content:center;background:var(--navy)}
+.vcard .vbody{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.vcard .badge{align-self:flex-start;font-size:.75rem;font-weight:700;letter-spacing:.02em;color:var(--lakedeep);border:1px solid var(--lake);border-radius:4px;padding:3px 8px}
+.vcard h3{font-size:1.1rem;font-weight:700}
+.vcard .tags{font-size:.86rem;color:var(--sub)}
+.vcard .state{margin-top:auto;font-size:.88rem;font-weight:600;color:var(--star)}
+.vcard .vbtn{margin-top:10px;display:inline-block;text-align:center;border:1.5px solid var(--midnight);border-radius:8px;padding:9px 0;font-weight:600;font-size:.9rem;color:var(--midnight);text-decoration:none}
+.vcard .vbtn:hover{background:var(--midnight);color:#fff}
+.open-slot{border:2px dashed var(--lake);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:26px 20px;background:transparent}
+.open-slot b{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:1.2rem;letter-spacing:.02em}
+.open-slot p{font-size:.9rem;color:var(--sub);max-width:28ch}
+.grid-note{margin-top:22px;font-size:.9rem;color:var(--sub);max-width:70ch}
+/* Why band */
+.why{background:var(--midnight);color:#C9D7E4}
+.why h2{color:#fff}
+.why .cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;margin-top:24px}
+.why .col{border-top:3px solid var(--lake);padding-top:14px}
+.why .col svg{display:block;margin-bottom:10px}
+.why .col b{display:block;color:#fff;font-size:1.02rem;margin-bottom:6px}
+.why .col p{font-size:.95rem}
+/* Restaurant signup */
+.join .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.join p{max-width:52ch;color:var(--sub);margin-bottom:14px}
+.join p strong{color:var(--midnight)}
+form{display:grid;gap:14px}
+label{font-weight:600;font-size:.9rem}
+input,select{width:100%;padding:11px 12px;border:1.5px solid var(--midnight);border-radius:8px;background:#fff;font:inherit;font-size:.95rem}
+.btn{display:inline-block;padding:12px 24px;border-radius:8px;background:var(--star);color:#fff;border:0;font-family:var(--ui);font-weight:700;font-size:.97rem;cursor:pointer;text-decoration:none}
+.btn:hover{background:#b22534}
+.form-note{font-size:.86rem;color:var(--sub)}
+footer.site{background:var(--midnight);color:#8DA2B9;padding:38px 0 26px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:.9rem}
+footer a{color:#C9D7E4;text-decoration:none;margin-right:18px}
+footer a:hover{color:#fff;text-decoration:underline}
+footer .fine{max-width:60ch}
+@media (max-width:940px){.grid{grid-template-columns:1fr 1fr}}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-art{display:none}
+  .why .cols{grid-template-columns:1fr}
+  .join .wrap{grid-template-columns:1fr}
+}
+@media (max-width:600px){.grid{grid-template-columns:1fr}.searchrow .loc{display:none}}
+</style>
+</head>
+<body>
+<header class="appbar">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Order Devon home">
+      <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#182A42"/><path d="M16 6l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L8.8 11.3l5-.7z" fill="#CE2F3C"/><path d="M7 25h18" stroke="#3C8DBC" stroke-width="2.6" stroke-linecap="round"/></svg>
+      <b>Order<span>Devon</span></b>
+    </a>
+    <div class="searchrow" role="search">
+      <div class="field loc">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8DA2B9" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        <label for="loc" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Delivery area</label>
+        <input id="loc" value="Devon Ave, Chicago" readonly aria-label="Delivery area (fixed to Devon Avenue, Chicago)">
+      </div>
+      <div class="field">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8DA2B9" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
+        <label for="q" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Search restaurants and dishes</label>
+        <input id="q" placeholder="Search opens at launch — biryani, chaat, nihari…" aria-describedby="q-note">
+        <span id="q-note" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Search is not active before launch.</span>
+      </div>
+    </div>
+    <a class="cta" href="#join">List your restaurant</a>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Devon Avenue, delivered.</h1>
+      <p class="lede">Devon Avenue is Chicago's South Asian food street — and ordering from it online usually means a third-party app taking a heavy cut from a family kitchen. Order Devon is a single ordering hub being built with the avenue's restaurants, on terms a small kitchen can actually live with. Founding restaurants are signing on now; diner ordering opens at launch.</p>
+      <div class="pills">
+        <span>One street, one app</span>
+        <span>Flat, published fees</span>
+        <span>Kitchens keep their customers</span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <!-- Karahi still life over the route line: modeled metal, curry, steam -->
+      <svg width="290" height="270" viewBox="0 0 290 270" role="img" aria-label="">
+        <defs>
+          <linearGradient id="od-steel" x1="0" y1="0" x2="1" y2=".3">
+            <stop offset="0" stop-color="#5A7691"/><stop offset=".35" stop-color="#8FA9C2"/><stop offset=".55" stop-color="#43596F"/><stop offset=".8" stop-color="#6D8AA5"/><stop offset="1" stop-color="#32465A"/>
+          </linearGradient>
+          <radialGradient id="od-curry" cx="40%" cy="30%" r="85%">
+            <stop offset="0" stop-color="#C45A2E"/><stop offset=".6" stop-color="#8F3418"/><stop offset="1" stop-color="#5A1D0C"/>
+          </radialGradient>
+          <linearGradient id="od-naanh" x1="0" y1="0" x2=".8" y2="1">
+            <stop offset="0" stop-color="#F0E2C8"/><stop offset="1" stop-color="#C19B66"/>
+          </linearGradient>
+        </defs>
+        <path d="M20 215H270" stroke="#3C8DBC" stroke-width="3" stroke-dasharray="14 10" stroke-linecap="round"/>
+        <!-- cast shadow -->
+        <ellipse cx="128" cy="208" rx="86" ry="10" fill="#060C14" opacity=".6"/>
+        <!-- karahi bowl -->
+        <path d="M52 140c0 38 32 64 76 64s76-26 76-64z" fill="url(#od-steel)"/>
+        <path d="M52 140c0 38 32 64 76 64-26-8-40-32-44-64z" fill="#1E2E3E" opacity=".55"/>
+        <path d="M196 148c-2 26-16 44-36 52 26-5 42-24 44-52z" fill="#B9CCDD" opacity=".4"/>
+        <!-- rim -->
+        <ellipse cx="128" cy="140" rx="76" ry="15" fill="#2A3C4E"/>
+        <ellipse cx="128" cy="138" rx="76" ry="15" fill="none" stroke="#9FB6CB" stroke-width="2.4"/>
+        <!-- handles -->
+        <path d="M46 134c-12-4-16-14-8-20M210 134c12-4 16-14 8-20" fill="none" stroke="#9FB6CB" stroke-width="4" stroke-linecap="round"/>
+        <!-- curry surface with oil ring and highlights -->
+        <ellipse cx="128" cy="139" rx="66" ry="11.5" fill="url(#od-curry)"/>
+        <ellipse cx="128" cy="139" rx="66" ry="11.5" fill="none" stroke="#E08A4E" stroke-width="1" opacity=".6"/>
+        <path d="M86 136c10-4 26-6 42-6 14 0 27 1.6 37 4.6" stroke="#E6A46B" stroke-width="1.4" fill="none" opacity=".75"/>
+        <g fill="#5A1D0C"><ellipse cx="106" cy="140" rx="7" ry="2.6"/><ellipse cx="142" cy="137" rx="8" ry="3"/><ellipse cx="160" cy="141" rx="6" ry="2.3"/></g>
+        <g fill="#E08A4E" opacity=".9"><ellipse cx="104" cy="139" rx="2.6" ry="1"/><ellipse cx="140" cy="136" rx="3" ry="1.1"/></g>
+        <g stroke="#3E7D4E" stroke-width="1.6" stroke-linecap="round"><path d="M118 134c2-1.6 5-2.2 8-1.8M150 139c2.4-.8 5-.6 7 .6"/></g>
+        <!-- steam -->
+        <g stroke="#8DA2B9" stroke-width="2" fill="none" stroke-linecap="round" opacity=".55">
+          <path d="M104 118c4-8-3-13 1-22M128 112c4-9-3-14 1-24M152 118c4-8-3-13 1-22"/>
+        </g>
+        <!-- folded naan resting beside -->
+        <g transform="translate(206,170) rotate(12)">
+          <path d="M0 22c0-14 12-26 30-26 14 0 24 8 24 18 0 4-3 8-8 8H8c-5 0-8-2-8 0z" fill="url(#od-naanh)"/>
+          <path d="M2 18c6 2 18 3 30 3 9 0 17-.6 22-2-4 4-13 6-24 6-13 0-24-3-28-7z" fill="#8F6B3A" opacity=".55"/>
+          <g fill="#8F6B3A"><circle cx="18" cy="8" r="2"/><circle cx="34" cy="4" r="1.8"/><circle cx="42" cy="12" r="1.6"/></g>
+          <g fill="#FBF4E4" opacity=".85"><circle cx="17" cy="7" r=".8"/><circle cx="33" cy="3" r=".7"/></g>
+        </g>
+        <!-- clock kept: delivery window -->
+        <circle cx="236" cy="70" r="24" fill="none" stroke="#3C8DBC" stroke-width="2.4"/>
+        <circle cx="236" cy="70" r="20.5" fill="none" stroke="#3C8DBC" stroke-width=".8" opacity=".5"/>
+        <path d="M236 58v12l8 5" stroke="#3C8DBC" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="chipbar" aria-label="Cuisine filters (preview — filtering activates at launch)">
+  <div class="wrap">
+    <button class="chip" aria-pressed="true" type="button">All of Devon</button>
+    <button class="chip" aria-pressed="false" type="button">Biryani &amp; rice</button>
+    <button class="chip" aria-pressed="false" type="button">Karahi &amp; curries</button>
+    <button class="chip" aria-pressed="false" type="button">Tandoor &amp; grills</button>
+    <button class="chip" aria-pressed="false" type="button">Chaat &amp; snacks</button>
+    <button class="chip" aria-pressed="false" type="button">South Indian</button>
+    <button class="chip" aria-pressed="false" type="button">Sweets &amp; chai</button>
+    <button class="chip" aria-pressed="false" type="button">Groceries</button>
+  </div>
+</div>
+
+<section class="vendors" id="restaurants">
+  <div class="wrap">
+    <p class="kicker">The lineup</p>
+    <h2>Founding restaurants wanted.</h2>
+    <p class="intro">This grid fills with real Devon Avenue kitchens as they sign on — each with its own menu, photos, and pickup or delivery options. The cards below show the card format with example data, so restaurants can see exactly how they'd appear. No real businesses are listed yet.</p>
+    <div class="grid">
+      <div class="vcard">
+        <div class="vart" aria-hidden="true">
+          <svg width="86" height="86" viewBox="0 0 86 86" aria-hidden="true">
+            <defs>
+              <radialGradient id="od-handi" cx="35%" cy="25%" r="95%"><stop offset="0" stop-color="#C87A4A"/><stop offset=".6" stop-color="#8F4A26"/><stop offset="1" stop-color="#55280F"/></radialGradient>
+              <radialGradient id="od-ricegr" cx="40%" cy="30%" r="85%"><stop offset="0" stop-color="#F7EFD9"/><stop offset=".8" stop-color="#DCC79B"/><stop offset="1" stop-color="#B2954F"/></radialGradient>
+            </defs>
+            <ellipse cx="43" cy="72" rx="28" ry="4.5" fill="#060C14" opacity=".55"/>
+            <path d="M18 44c-2 16 9 28 25 28s27-12 25-28c-1.6-11-12-18-25-18s-23.4 7-25 18z" fill="url(#od-handi)"/>
+            <path d="M18 44c-2 16 9 28 25 28-10-6-14-16-14-28 0-7 2-13 6-17-9 2-16 8-17 17z" fill="#3A1A08" opacity=".5"/>
+            <path d="M66 46c1 11-4 20-12 24 10-3 16-12 15-24z" fill="#E6A878" opacity=".45"/>
+            <ellipse cx="43" cy="30" rx="24" ry="7" fill="#2E1507"/>
+            <ellipse cx="43" cy="28.6" rx="24" ry="7" fill="none" stroke="#E6A878" stroke-width="1.4"/>
+            <ellipse cx="43" cy="29" rx="19" ry="5" fill="url(#od-ricegr)"/>
+            <g stroke="#B2954F" stroke-width=".9" stroke-linecap="round"><path d="M32 27l5-1.4M42 26l5 1M36 31l5-1M48 29l4 1.4"/></g>
+            <g stroke="#B5431F" stroke-width="1.1" stroke-linecap="round"><path d="M38 28l4-.8M47 27l3 .8"/></g>
+            <g stroke="#8DA2B9" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".6"><path d="M34 20c2-4-1.6-6.5.4-11M46 19c2-4-1.6-6.5.4-11"/></g>
+          </svg>
+        </div>
+        <div class="vbody">
+          <span class="badge">Example listing</span>
+          <h3>Your biryani house</h3>
+          <p class="tags">Biryani, karahi, tandoor breads</p>
+          <p class="state">Slot open — could be your kitchen</p>
+          <a class="vbtn" href="#join">Claim this card</a>
+        </div>
+      </div>
+      <div class="vcard">
+        <div class="vart" aria-hidden="true">
+          <svg width="86" height="86" viewBox="0 0 86 86" aria-hidden="true">
+            <defs>
+              <linearGradient id="od-kat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7EA6C4"/><stop offset=".55" stop-color="#3F6B8C"/><stop offset="1" stop-color="#22425C"/></linearGradient>
+              <radialGradient id="od-puri" cx="35%" cy="28%" r="85%"><stop offset="0" stop-color="#F2DFB8"/><stop offset=".7" stop-color="#D4AF72"/><stop offset="1" stop-color="#9C7338"/></radialGradient>
+            </defs>
+            <ellipse cx="43" cy="66" rx="28" ry="4.5" fill="#060C14" opacity=".55"/>
+            <path d="M18 44c0 13 11 20 25 20s25-7 25-20z" fill="url(#od-kat)"/>
+            <path d="M18 44c0 13 11 20 25 20-9-4-14-11-15-20z" fill="#152C40" opacity=".55"/>
+            <path d="M64 47c-1.4 8-7 13-14 15 9-1.6 15-7 16-15z" fill="#AECBE0" opacity=".5"/>
+            <ellipse cx="43" cy="44" rx="25" ry="6" fill="#10212F"/>
+            <circle cx="34" cy="38" r="7.5" fill="url(#od-puri)"/><path d="M27 41c1.8 3 4.5 4.6 7.5 4.6 3.4 0 6.4-2 7.3-5-1 4.6-4.4 7.6-8 7.6-3.4 0-6.4-3-6.8-7.2z" fill="#6E4C1E" opacity=".6"/>
+            <circle cx="48" cy="34" r="8.5" fill="url(#od-puri)"/><path d="M40 37.5c2 3.3 5 5.1 8.5 5.1 3.8 0 7.2-2.3 8.2-5.6-1.1 5.2-5 8.5-9 8.5-3.8 0-7.2-3.3-7.7-8z" fill="#6E4C1E" opacity=".6"/>
+            <circle cx="56" cy="41" r="6.5" fill="url(#od-puri)"/><path d="M50 43.5c1.6 2.6 4 4 6.5 4 2.9 0 5.5-1.7 6.3-4.3-.9 4-3.8 6.6-6.9 6.6-3 0-5.5-2.6-5.9-6.3z" fill="#6E4C1E" opacity=".6"/>
+            <g fill="#6E4C1E" opacity=".85"><circle cx="32" cy="35.6" r=".8"/><circle cx="46" cy="31" r=".9"/><circle cx="51" cy="36" r=".7"/><circle cx="55" cy="39" r=".7"/></g>
+            <g fill="none" stroke-linecap="round"><path d="M36 30c3-1.6 6-1.6 9 0" stroke="#F6F9FB" stroke-width="1.8" opacity=".9"/><path d="M40 26c2-1.4 4-1.8 6-1.2" stroke="#3E7D4E" stroke-width="1.3"/><path d="M31 33h3M52 33h3" stroke="#B5431F" stroke-width="1.3"/></g>
+          </svg>
+        </div>
+        <div class="vbody">
+          <span class="badge">Example listing</span>
+          <h3>Your chaat counter</h3>
+          <p class="tags">Pani puri, dahi puri, falooda</p>
+          <p class="state">Slot open — could be your kitchen</p>
+          <a class="vbtn" href="#join">Claim this card</a>
+        </div>
+      </div>
+      <div class="vcard">
+        <div class="vart" aria-hidden="true">
+          <svg width="86" height="86" viewBox="0 0 86 86" aria-hidden="true">
+            <defs>
+              <linearGradient id="od-barfi" x1="0" y1="0" x2=".7" y2="1"><stop offset="0" stop-color="#F6EEDC"/><stop offset=".7" stop-color="#E0CBA0"/><stop offset="1" stop-color="#B99B62"/></linearGradient>
+              <linearGradient id="od-pista" x1="0" y1="0" x2=".7" y2="1"><stop offset="0" stop-color="#9FBE7A"/><stop offset=".7" stop-color="#6F9450"/><stop offset="1" stop-color="#4A6A33"/></linearGradient>
+            </defs>
+            <ellipse cx="43" cy="68" rx="30" ry="4.5" fill="#060C14" opacity=".55"/>
+            <!-- stacked barfi diamonds with side faces -->
+            <g>
+              <path d="M24 56l14-9 14 9-14 9z" fill="url(#od-barfi)"/>
+              <path d="M24 56v5l14 9v-5z" fill="#9C7F4C"/>
+              <path d="M52 56v5l-14 9v-5z" fill="#C4A872"/>
+              <path d="M44 46l14-9 14 9-14 9z" fill="url(#od-pista)"/>
+              <path d="M44 46v5l14 9v-5z" fill="#3C5629"/>
+              <path d="M72 46v5l-14 9v-5z" fill="#587A3E"/>
+              <path d="M32 40l14-9 14 9-14 9z" fill="url(#od-barfi)"/>
+              <path d="M32 40v5l14 9v-5z" fill="#9C7F4C"/>
+              <path d="M60 40v5l-14 9v-5z" fill="#C4A872"/>
+              <!-- silver leaf glints -->
+              <g stroke="#F6F9FB" stroke-width="1" opacity=".85" stroke-linecap="round">
+                <path d="M41 36l6-4M44 38l5-3.4"/>
+                <path d="M55 43l6-4"/>
+                <path d="M33 53l6-4"/>
+              </g>
+              <!-- pistachio flecks -->
+              <g fill="#4A6A33"><circle cx="38" cy="40" r=".9"/><circle cx="48" cy="36" r=".8"/><circle cx="34" cy="56" r=".9"/></g>
+            </g>
+          </svg>
+        </div>
+        <div class="vbody">
+          <span class="badge">Example listing</span>
+          <h3>Your sweet shop</h3>
+          <p class="tags">Mithai boxes, jalebi, kulfi</p>
+          <p class="state">Slot open — could be your kitchen</p>
+          <a class="vbtn" href="#join">Claim this card</a>
+        </div>
+      </div>
+      <div class="vcard">
+        <div class="vart" aria-hidden="true">
+          <svg width="86" height="86" viewBox="0 0 86 86" aria-hidden="true">
+            <defs>
+              <linearGradient id="od-meat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A14A34"/><stop offset=".55" stop-color="#78291C"/><stop offset="1" stop-color="#43130C"/></linearGradient>
+            </defs>
+            <!-- grill bars -->
+            <g stroke="#43596F" stroke-width="2.6" stroke-linecap="round"><path d="M14 62h58M14 70h58"/></g>
+            <g stroke="#8FA9C2" stroke-width=".8" opacity=".5" stroke-linecap="round"><path d="M14 61h58M14 69h58"/></g>
+            <!-- two skewers of modeled seekh -->
+            <g transform="rotate(-18 43 44)">
+              <path d="M10 44h66" stroke="#8DA2B9" stroke-width="2.2" stroke-linecap="round"/>
+              <rect x="20" y="37.5" width="17" height="13" rx="6.5" fill="url(#od-meat)"/>
+              <path d="M22 41c4-1.6 9-1.6 13 0" stroke="#C97B5A" stroke-width="1.2" fill="none" opacity=".85"/>
+              <path d="M22 47.5c4 1.6 9 1.6 13 0" stroke="#280A06" stroke-width="1.3" fill="none" opacity=".75"/>
+              <path d="M25 44h3.4M31 45.6h3" stroke="#280A06" stroke-width="1" opacity=".85"/>
+              <rect x="42" y="37.5" width="17" height="13" rx="6.5" fill="url(#od-meat)"/>
+              <path d="M44 41c4-1.6 9-1.6 13 0" stroke="#C97B5A" stroke-width="1.2" fill="none" opacity=".85"/>
+              <path d="M44 47.5c4 1.6 9 1.6 13 0" stroke="#280A06" stroke-width="1.3" fill="none" opacity=".75"/>
+              <path d="M47 45.6h3.4M53 44h3" stroke="#280A06" stroke-width="1" opacity=".85"/>
+            </g>
+            <g transform="rotate(-18 43 44) translate(0,17)">
+              <path d="M14 44h62" stroke="#8DA2B9" stroke-width="2.2" stroke-linecap="round"/>
+              <rect x="26" y="37.5" width="17" height="13" rx="6.5" fill="url(#od-meat)"/>
+              <path d="M28 41c4-1.6 9-1.6 13 0" stroke="#C97B5A" stroke-width="1.2" fill="none" opacity=".85"/>
+              <path d="M28 47.5c4 1.6 9 1.6 13 0" stroke="#280A06" stroke-width="1.3" fill="none" opacity=".75"/>
+              <rect x="48" y="37.5" width="15" height="13" rx="6.5" fill="url(#od-meat)"/>
+              <path d="M50 41c3.4-1.6 7.6-1.6 11 0" stroke="#C97B5A" stroke-width="1.2" fill="none" opacity=".85"/>
+              <path d="M50 47.5c3.4 1.6 7.6 1.6 11 0" stroke="#280A06" stroke-width="1.3" fill="none" opacity=".75"/>
+            </g>
+            <!-- heat -->
+            <g stroke="#8DA2B9" stroke-width="1.4" fill="none" stroke-linecap="round" opacity=".55"><path d="M30 24c2-4-1.4-6 .6-10M48 20c2-4-1.4-6 .6-10"/></g>
+          </svg>
+        </div>
+        <div class="vbody">
+          <span class="badge">Example listing</span>
+          <h3>Your kabab grill</h3>
+          <p class="tags">Seekh, boti rolls, naan</p>
+          <p class="state">Slot open — could be your kitchen</p>
+          <a class="vbtn" href="#join">Claim this card</a>
+        </div>
+      </div>
+      <div class="vcard">
+        <div class="vart" aria-hidden="true">
+          <svg width="86" height="86" viewBox="0 0 86 86" aria-hidden="true">
+            <defs>
+              <linearGradient id="od-dosa" x1="0" y1="0" x2="1" y2=".4"><stop offset="0" stop-color="#F2DCB0"/><stop offset=".5" stop-color="#DDB876"/><stop offset="1" stop-color="#A97C3C"/></linearGradient>
+              <radialGradient id="od-plate" cx="40%" cy="30%" r="90%"><stop offset="0" stop-color="#9FB6CB"/><stop offset=".7" stop-color="#5F7A93"/><stop offset="1" stop-color="#3A5069"/></radialGradient>
+            </defs>
+            <ellipse cx="43" cy="64" rx="32" ry="5" fill="#060C14" opacity=".55"/>
+            <!-- steel plate -->
+            <ellipse cx="43" cy="56" rx="32" ry="9" fill="url(#od-plate)"/>
+            <ellipse cx="43" cy="55" rx="32" ry="9" fill="none" stroke="#B9CCDD" stroke-width="1"/>
+            <ellipse cx="43" cy="55.5" rx="26" ry="6.6" fill="#2A3C4E"/>
+            <!-- rolled dosa, modeled cylinder -->
+            <g transform="rotate(-8 43 48)">
+              <rect x="13" y="40" width="60" height="14" rx="7" fill="url(#od-dosa)"/>
+              <path d="M14 49c10 3.4 28 5 44 3.6 6-.6 11-1.6 14-3-3 4-12 6.4-24 6.4-16 0-30-3-34-7z" fill="#7E5A26" opacity=".55"/>
+              <path d="M16 43c12-2.6 32-2.6 48-.6" stroke="#FBF2DD" stroke-width="1.3" fill="none" opacity=".85"/>
+              <!-- open spiral end -->
+              <ellipse cx="70" cy="47" rx="4.6" ry="7" fill="#C49A55"/>
+              <path d="M70 41.6c2 1.4 3 3.2 3 5.4s-1 4-3 5.4c-1.4-1.2-2.2-3.2-2.2-5.4s.8-4.2 2.2-5.4z" fill="#8F6B30"/>
+              <!-- toasted mottling -->
+              <g fill="#8F6B30" opacity=".6"><ellipse cx="28" cy="46" rx="2.4" ry="1.2"/><ellipse cx="42" cy="44" rx="2.8" ry="1.3"/><ellipse cx="55" cy="47" rx="2.2" ry="1.1"/></g>
+            </g>
+            <!-- chutney katoris -->
+            <g>
+              <ellipse cx="17" cy="33" rx="7.5" ry="3.4" fill="#10212F"/><path d="M9.5 33c0 3.6 3.4 6 7.5 6s7.5-2.4 7.5-6z" fill="#43596F"/><ellipse cx="17" cy="33" rx="5.6" ry="2.3" fill="#F6F9FB"/><path d="M13 32.4c2-1 6-1 8 0" stroke="#C3CDD6" stroke-width=".8" fill="none"/>
+              <ellipse cx="68" cy="27" rx="7.5" ry="3.4" fill="#10212F"/><path d="M60.5 27c0 3.6 3.4 6 7.5 6s7.5-2.4 7.5-6z" fill="#43596F"/><ellipse cx="68" cy="27" rx="5.6" ry="2.3" fill="#3E7D4E"/><path d="M64 26.4c2-1 6-1 8 0" stroke="#79B087" stroke-width=".8" fill="none"/>
+            </g>
+          </svg>
+        </div>
+        <div class="vbody">
+          <span class="badge">Example listing</span>
+          <h3>Your dosa kitchen</h3>
+          <p class="tags">Dosa, idli, filter coffee</p>
+          <p class="state">Slot open — could be your kitchen</p>
+          <a class="vbtn" href="#join">Claim this card</a>
+        </div>
+      </div>
+      <div class="open-slot">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3C8DBC" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+        <b>Founding slots open</b>
+        <p>Founding kitchens set the launch lineup and lock founding terms for good.</p>
+        <a class="btn" href="#join">List your restaurant</a>
+      </div>
+    </div>
+    <p class="grid-note">Every card above is a labeled example showing the listing format — not a real business. Real restaurants appear here only after they've signed on and approved their listing.</p>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <p class="kicker" style="color:var(--lake)">Why one street gets its own app</p>
+    <h2>Built for the avenue, not above it.</h2>
+    <div class="cols">
+      <div class="col">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3C8DBC" stroke-width="2" aria-hidden="true"><path d="M4 10h16M4 10l2-5h12l2 5M6 10v9h12v-9"/></svg>
+        <b>Flat fees, published openly</b>
+        <p>One flat per-order fee, printed on this site before launch. No percentage commissions that grow with a kitchen's success, and no charging diners hidden markups.</p>
+      </div>
+      <div class="col">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3C8DBC" stroke-width="2" aria-hidden="true"><circle cx="9" cy="8" r="3.4"/><path d="M3.5 19c.8-3.4 3-5 5.5-5s4.7 1.6 5.5 5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 19c-.4-2.2-1.4-3.7-2.8-4.5"/></svg>
+        <b>Kitchens keep their customers</b>
+        <p>Order history and regulars belong to the restaurant, not to us. A kitchen can export its own customer list any day, or leave with it any time.</p>
+      </div>
+      <div class="col">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3C8DBC" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        <b>One neighborhood, done right</b>
+        <p>We're not trying to cover a city. One corridor, every kitchen on it, pickup-first with delivery close to home — the radius a fresh naan survives.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="join" id="join">
+  <div class="wrap">
+    <div>
+      <p class="kicker">For restaurants</p>
+      <h2>Be a founding kitchen.</h2>
+      <p><strong>Who this is for:</strong> any restaurant, counter, or sweet shop on or around Devon Avenue that wants online ordering without handing a percentage of every order to a platform.</p>
+      <p><strong>What founding kitchens get:</strong> first position in the launch lineup, founding terms locked permanently, menu and photo setup done with you, and a direct say in how ordering, pickup, and delivery work before anything ships.</p>
+      <p><strong>What it costs to join:</strong> nothing before launch. The flat per-order fee will be published on this page before any diner places an order.</p>
+    </div>
+    <form action="#" method="post" onsubmit="event.preventDefault();this.querySelector('.form-note').textContent='Thanks — restaurant sign-up isn’t live yet, so nothing was sent. We’re onboarding founding kitchens in person first.';">
+      <div>
+        <label for="r-name">Restaurant name</label>
+        <input id="r-name" name="restaurant" required autocomplete="organization">
+      </div>
+      <div>
+        <label for="r-contact">Your name</label>
+        <input id="r-contact" name="contact" required autocomplete="name">
+      </div>
+      <div>
+        <label for="r-type">Kitchen type</label>
+        <select id="r-type" name="type">
+          <option>Restaurant — dine-in and takeout</option>
+          <option>Takeout / counter only</option>
+          <option>Sweets &amp; snacks shop</option>
+          <option>Grocery with hot food</option>
+        </select>
+      </div>
+      <div>
+        <label for="r-now">How do you take orders today?</label>
+        <select id="r-now" name="current">
+          <option>Phone only</option>
+          <option>A third-party delivery app</option>
+          <option>Our own website</option>
+          <option>Walk-in only</option>
+        </select>
+      </div>
+      <button class="btn" type="submit">Request founding terms</button>
+      <p class="form-note">Sign-up opens with launch. Nothing you type here leaves your browser yet.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<script>
+// Chip preview: visual toggle only; filtering activates at launch.
+document.querySelectorAll('.chip').forEach(function(chip){
+  chip.addEventListener('click', function(){
+    document.querySelectorAll('.chip').forEach(function(c){c.setAttribute('aria-pressed','false');});
+    chip.setAttribute('aria-pressed','true');
+  });
+});
+</script>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <nav aria-label="Footer">
+        <a href="#restaurants">The lineup</a>
+        <a href="#join">For restaurants</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </nav>
+      <p class="fine" style="margin-top:10px">© 2026 Order Devon. All rights reserved. Order Devon is pre-launch: no ordering is live, and vendor cards shown are labeled examples, not real businesses.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
